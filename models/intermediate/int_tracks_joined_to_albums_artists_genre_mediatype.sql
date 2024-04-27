@@ -1,0 +1,22 @@
+select
+    t.track_id,
+    a.album_id,
+    m.mediatype_id,
+    g.genre_id,
+    t.track_name,
+    t.track_composer,
+    a.album_name,
+    ar.artist_name,
+    m.mediatype_name,
+    g.genre_name,
+    t.track_length_ms,
+    t.track_length_seconds,
+    t.track_length_minutes,
+    Bytes,
+    unit_price,
+from 
+    {{ref('stg_music__tracks')}} as t,
+    {{ref('stg_music__genres')}} as g,
+    {{ref('stg_music__media_types')}} as m,
+    {{ref('stg_music__albums')}} as a,
+    {{ref('stg_music__artists')}} as ar

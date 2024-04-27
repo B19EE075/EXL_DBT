@@ -1,0 +1,78 @@
+version: 2
+models:
+  - name: stg_music_albums
+    columns:
+      - name: album_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_music_artists
+    columns:
+      - name: artist_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_music_customers
+    columns:
+      - name: customer_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_music_employees
+    columns:
+      - name: employee_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_music_genres
+    columns:
+      - name: genre_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_music_invoices_lines
+    columns:
+      - name: invoice_lineid
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_music_invoices
+    columns:
+      - name: invoice_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_music_media_types
+    columns:
+      - name: mediatype_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_music_playlist_tracks
+    columns:
+      - name: track_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_music_playlists
+    columns:
+      - name: playlist_id
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_music_tracks
+    columns:
+      - name: track_id
+        tests:
+          - unique
+          - not_null
