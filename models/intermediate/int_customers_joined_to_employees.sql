@@ -27,4 +27,6 @@ select
     employee_email_address,
     supervisor_employee_id
 
-from {{ ref('stg_music__customers') }},{{ ref('stg_music__employees') }}
+from {{ ref('stg_music__customers') }} 
+left join {{ ref('stg_music__employees') }} 
+on  representative_employee_id = employee_id

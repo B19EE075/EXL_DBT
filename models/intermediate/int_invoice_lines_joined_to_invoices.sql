@@ -11,4 +11,5 @@ select
     billing_zipcode,
     quantity_purchased,
     invoice_lineitem_revenue_usd
-from {{ ref('stg_music__invoice_lines') }} as invl,{{ ref('stg_music__invoices') }}
+from {{ ref('stg_music__invoice_lines') }} as invl inner join {{ ref('stg_music__invoices') }} as inv
+on invl.invoice_id =  inv.invoice_id
